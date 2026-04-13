@@ -27,11 +27,6 @@ navigation:
   - title: Operations
     icon: wrench
     items:
-      - title: Security
-        page: pages/operations/security.md
-        visible_when:
-          permissions:
-            - canViewSecurity
       - title: Linux Bundles
         page: pages/operations/bundles/linux.md
         visible_when:
