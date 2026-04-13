@@ -1,0 +1,11 @@
+branding:
+  title: "PlantMap"
+  overview: "Plant tracking and care logging application"
+  primaryColor: "#16a34a"
+  secondaryColor: "#166534"
+  linkColor: "#15803d"
+  linkHoverColor: "#14532d"
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  contact: "support@plantmap.info"
+  background: minimal

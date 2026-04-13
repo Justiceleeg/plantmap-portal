@@ -19,6 +19,11 @@ navigation:
         visible_when:
           entitlements:
             - isHelmInstallEnabled
+
+  - title: Configuration
+    icon: settings
+    page: pages/configuration.md
+
   - title: Operations
     icon: wrench
     items:
@@ -45,6 +50,22 @@ navigation:
     items:
       - title: Checking for Updates
         page: pages/updates/checking.md
+
+  - title: Infrastructure
+    icon: database
+    items:
+      - title: AWS Module
+        terraform_module: github.com/Justiceleeg/plantmap-terraform//modules/aws?ref=main
+        visible_when:
+          entitlements:
+            - isTerraformEnabled
+
+  - title: Reference
+    icon: book
+    items:
+      - title: PlantMap Helm Chart
+        helm_chart:
+          name: plantmap
 
   - title: Support
     icon: life-buoy

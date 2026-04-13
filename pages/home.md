@@ -1,46 +1,46 @@
 ---
-title: Documentation
+title: PlantMap Documentation
 ---
 
-# Documentation
+# PlantMap Documentation
 
-Welcome to your personalized documentation portal. The navigation and content are customized based on your license entitlements.
+Welcome, {{ customer.name }}. This portal contains installation guides, upgrade instructions, and troubleshooting resources for PlantMap — a plant tracking and care logging application.
 
 ## Available Features
 
-Your installation includes access to the following features:
+Your license includes access to:
 
 {{#if entitlements.isEmbeddedClusterDownloadEnabled}}
-- **Linux (Embedded Cluster):** Install on a Linux server using Embedded Cluster
+- **Linux (Embedded Cluster):** Install PlantMap on a bare Linux server
 {{/if}}
 {{#if entitlements.isHelmInstallEnabled}}
-- **Helm Installation:** Deploy to existing Kubernetes clusters using Helm charts
+- **Helm Installation:** Deploy PlantMap to an existing Kubernetes cluster
 {{/if}}
 {{#if entitlements.isAirgapSupported}}
-- **Air Gap Support:** Install in disconnected environments
+- **Air Gap Support:** Install in disconnected environments with no internet access
+{{/if}}
+{{#if entitlements.isTerraformEnabled}}
+- **Terraform Modules:** Provision AWS infrastructure for PlantMap
 {{/if}}
 
 ## Getting Started
 
-Use the sidebar navigation on the left to explore available documentation sections. We recommend starting with:
-
 {{#if entitlements.isEmbeddedClusterDownloadEnabled}}
-1. **Installation Requirements** — Review system requirements and prerequisites for Embedded Cluster installations
+1. **[Requirements](installation/requirements)** — Review system requirements
 {{/if}}
-2. **Installation Guide** — Follow step-by-step installation instructions for your deployment method
-3. **Updates** — Check for and manage application updates
-4. **Support Bundles** — Generate diagnostic bundles for troubleshooting
-
-## Quick Links
-
+2. **Installation** — Follow the guide for your deployment method:
 {{#if entitlements.isEmbeddedClusterDownloadEnabled}}
-- [Installation Requirements](installation/requirements)
-- [Linux Installation](installation/linux)
+   - [Linux Installation](installation/linux)
 {{/if}}
 {{#if entitlements.isHelmInstallEnabled}}
-- [Helm Installation](installation/helm)
+   - [Helm Installation](installation/helm)
 {{/if}}
-- [Release History](installation/release-history)
-- [Check for Updates](updates/checking)
-- [Support Bundles](operations/bundles/uploaded)
-- [FAQ](support/faq)
+3. **[Release History](installation/release-history)** — View all available versions
+4. **[Check for Updates](updates/checking)** — Keep your instance current
+
+## Support
+
+If you run into issues:
+1. Generate a support bundle from the PlantMap UI (**Settings > Support Bundle**)
+2. [Upload the bundle](operations/bundles/uploaded) for analysis
+3. [Contact support](support/contact) if you need further help
