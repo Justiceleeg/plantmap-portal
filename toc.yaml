@@ -56,9 +56,6 @@ navigation:
     items:
       - title: AWS Module
         terraform_module: github.com/Justiceleeg/plantmap-terraform//modules/aws?ref=main
-        visible_when:
-          entitlements:
-            - isTerraformEnabled
 
   - title: Reference
     icon: book
