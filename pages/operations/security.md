@@ -8,3 +8,5 @@ visible_when:
 # Security
 
 View vulnerability scanning and security reports for your releases.
+
+<SecurityCenter />
