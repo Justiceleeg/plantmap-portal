@@ -4,21 +4,12 @@ navigation:
     items:
       - title: Requirements
         page: pages/installation/requirements.md
-        visible_when:
-          entitlements:
-            - isEmbeddedClusterDownloadEnabled
       - title: Release History
         page: pages/installation/release-history.md
       - title: Linux
         page: pages/installation/linux.md
-        visible_when:
-          entitlements:
-            - isEmbeddedClusterDownloadEnabled
       - title: Helm
         page: pages/installation/helm.md
-        visible_when:
-          entitlements:
-            - isHelmInstallEnabled
 
   - title: Configuration
     icon: settings
@@ -34,14 +25,8 @@ navigation:
             - canViewSecurity
       - title: Linux Bundles
         page: pages/operations/bundles/linux.md
-        visible_when:
-          entitlements:
-            - isEmbeddedClusterDownloadEnabled
       - title: Helm Bundles
         page: pages/operations/bundles/helm.md
-        visible_when:
-          entitlements:
-            - isHelmInstallEnabled
       - title: Upload Bundles
         page: pages/operations/bundles/uploaded.md
 
@@ -56,6 +41,9 @@ navigation:
     items:
       - title: AWS Module
         terraform_module: github.com/Justiceleeg/plantmap-terraform//modules/aws?ref=main
+        visible_when:
+          entitlements:
+            - isTerraformEnabled
 
   - title: Reference
     icon: book
